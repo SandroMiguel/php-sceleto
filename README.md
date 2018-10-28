@@ -104,7 +104,7 @@ licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
 Want to contribute? All contributions are welcome. Read the [contributing guide](CONTRIBUTING.md).
 
 ## Questions
-If you have questions tweet me at [@SandroMiguel77](https://twitter.com/SandroMiguel77) or [open an issue](https://github.com/SandroMiguel/react-sceleto/issues/new).
+If you have questions tweet me at [@SandroMiguel77](https://twitter.com/SandroMiguel77) or [open an issue](https://github.com/SandroMiguel/php-sceleto/issues/new).
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
