@@ -45,7 +45,7 @@ your-php-app/
 
 ### Step 1 - Install this directory structure
 #### Download
-Download the [latest release](https://github.com/SandroMiguel/php-sceleto/archive/v.0.2.zip)
+Download the [latest release](https://github.com/SandroMiguel/php-sceleto/archive/v.0.3.zip)
 
 ### Step 2 - Install the dependencies
 Install the dependencies with Composer.
