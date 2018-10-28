@@ -1,0 +1,45 @@
+{
+    "name": "php-sceleto/php-sceleto",
+    "description": "Sample of PHP file structure.",
+    "homepage": "https://github.com/SandroMiguel/php-sceleto",
+    "keywords": [
+        "php",
+        "directory",
+        "structure",
+        "skeleton",
+        "phpunit"
+    ],
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sandro Miguel Marques",
+            "homepage": "http://sandromiguel.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/SandroMiguel/php-sceleto/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpSceleto\\Core\\":    "src/core/",
+            "PhpSceleto\\App\\":     "src/app/"
+      }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "7"
+    },
+    "scripts": {
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --coverage-html log/report"
+    },
+    "scripts-descriptions": {
+        "test": "Run all tests!",
+        "test-coverage": "Run code coverage"
+    }
+}
