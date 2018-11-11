@@ -7,38 +7,39 @@
 
 The inspirational skeleton in PHP
 
-Current version: **0.3.0**
+Current version: **0.4.0**
 
 ## Directory structure
 ```
 your-php-app/
-├── public/
-│   ├── css/
-│   ├── js/
-│   └── img/
+├──┬ public/
+│  ├─── css/
+│  ├─── js/
+│  └─── img/
 │
-├── src/
-│   ├── app/
-│   │   ├── [SomeCustomClass].php
-│   │   ├── ...
-│   └── core/
-│       ├── [SomeCommonClass].php
-│       ├── ...
+├──┬ src/
+│  ├──┬ app/
+│  │  ├─── [SomeCustomClass].php
+│  │  ├─── ...
+│  │  
+│  └──┬ core/
+│     ├─── [SomeCommonClass].php
+│     ├─── ...
 │
-├── config/
-├── logs/
-├── docs/
-├── vendor/
-├── tests/
-├── .gitignore
-├── .editorconfig
-├── .htaccess
-├── composer.json
-├── composer.lock
-├── phpunit.xml.dist
-├── LICENSE
-└── CONTRIBUTING.md
-└── README.md
+├─── config/
+├─── logs/
+├─── docs/
+├─── vendor/
+├─── tests/
+├─── .gitignore
+├─── .editorconfig
+├─── .htaccess
+├─── composer.json
+├─── composer.lock
+├─── phpunit.xml.dist
+├─── LICENSE
+├─── CONTRIBUTING.md
+└─── README.md
 ```
 
 ## Getting Started
