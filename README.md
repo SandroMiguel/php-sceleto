@@ -8,7 +8,7 @@
 
 The inspirational skeleton in PHP
 
-Current version: **0.4.0**
+Current version: **0.4.1**
 
 ## Directory structure
 
@@ -119,7 +119,7 @@ Want to contribute? All contributions are welcome. Read the [contributing guide]
 
 ## Questions
 
-If you have questions tweet me at [@SandroMiguel77](https://twitter.com/SandroMiguel77) or [open an issue](https://github.com/SandroMiguel/php-sceleto/issues/new).
+If you have questions tweet me at [@sandro_m_m](https://twitter.com/sandro_m_m) or [open an issue](https://github.com/SandroMiguel/php-sceleto/issues/new).
 
 ## License
 
