@@ -33,8 +33,8 @@ your-php-app/
 ├─── docs/
 ├─── vendor/
 ├─── tests/
-├─── .gitignore
 ├─── .editorconfig
+├─── .gitignore
 ├─── .htaccess
 ├─── composer.json
 ├─── composer.lock
@@ -97,8 +97,8 @@ Files and folders overview.
 | **docs/**                        | Documentation files (e.g. PHPDoc)                        |
 | **vendor/**                      | Composer vendor directory contains your dependencies     |
 | **tests/**                       | Automated tests                                          |
-| **.gitignore**                   | Files and directories that Git should ignore             |
 | **.editorconfig**                | IDE coding style                                         |
+| **.gitignore**                   | Files and directories that Git should ignore             |
 | **.htaccess**                    | Hypertext access file for Apache configuration           |
 | **composer.json**                | Composer dependencies                                    |
 | **composer.lock**                | Composer lock file                                       |
