@@ -1,12 +1,15 @@
-# .htaccess
+# .htaccess v3.5.2 php-sceleto (2022/07/05) sandromiguel@sandromiguel.com
 
 ########################
 # Show/Hide PHP errors #
 ########################
-#php_flag display_errors on
-#php_value error_reporting 30719
+# php_flag display_errors on
+# php_value error_reporting 30719
 php_flag display_errors off
 php_value error_reporting 0
+
+# Debug mode
+# SetEnv DEBUG true
 
 ##########
 # Upload #
@@ -36,72 +39,69 @@ AddDefaultCharset utf-8
     Require all denied
 </Files>
 
+# Hide a specific file
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
+
 ###################################
-# Rewrite engine  (Friendly URLs) #
+# Rewrite engine                  #
 ###################################
 <IfModule mod_rewrite.c>
 
     RewriteEngine On
-    Options +FollowSymlinks
+
+    # Exclude files and directories from rewrite rule
+    RewriteRule ^robots.txt public/robots.txt [L]
+    RewriteRule ^humans.txt public/humans.txt [L]
+    RewriteRule ^sitemap.xml public/sitemap.xml [L]
+    RewriteRule ^favicon.ico public/icons/favicon.ico [L]
+    RewriteRule ^(backoffice-directory)($|/) - [L]
 
     # To redirect from www to non www (Rewrite www.example.com → example.com)
     RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
     RewriteRule ^(.*) http%{ENV:protossl}://%1/$1 [R=301,NE,L]
 
-    # Redirect to public/index.php
+    # Redirect HTTP to HTTPS automatically (only if not in localhost)
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+	# API (Web Service): Front Controller (Rewrite 1.0/abc → api/v1.0/index.php)
+    RewriteRule ^([0-9]).([0-9])/(.*)$ api/v$1.$2/index.php [B,NE,NC,L]
+
+    # Spefic language and page - e.g. en/some-page → public/index.php?lang=en&pageName=some-page
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.*)$ public/index.php
+    RewriteRule ^([a-z]{2})?\/?([^\/]+)?\/?([^\/]+)?\/? public/index.php?lang=$1&pageName=$2&trailUniqueName=$3 [L,QSA]
 
 </IfModule>
 
-#######################################################################
-# Expires headers                                                     #
-#                                                                     #
-# Credits: https://httpd.apache.org/docs/current/mod/mod_expires.html #
-#          HTML5 Boilerplate                                          #
-#######################################################################
-<IfModule mod_expires.c>
-    ExpiresActive on
-    ExpiresDefault                                      "access plus 1 month"
-  # CSS
-    ExpiresByType text/css                              "access plus 1 year"
-  # Data interchange
-    ExpiresByType application/atom+xml                  "access plus 1 hour"
-    ExpiresByType application/rdf+xml                   "access plus 1 hour"
-    ExpiresByType application/rss+xml                   "access plus 1 hour"
-    ExpiresByType application/json                      "access plus 0 seconds"
-    ExpiresByType application/ld+json                   "access plus 0 seconds"
-    ExpiresByType application/schema+json               "access plus 0 seconds"
-    ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
-    ExpiresByType application/xml                       "access plus 0 seconds"
-    ExpiresByType text/xml                              "access plus 0 seconds"
-  # Favicon (cannot be renamed!) and cursor images
-    ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
-    ExpiresByType image/x-icon                          "access plus 1 week"
-  # HTML
-    ExpiresByType text/html                             "access plus 0 seconds"
-  # JavaScript
-    ExpiresByType application/javascript                "access plus 1 year"
-    ExpiresByType application/x-javascript              "access plus 1 year"
-    ExpiresByType text/javascript                       "access plus 1 year"
-  # Manifest files
-    ExpiresByType application/manifest+json             "access plus 1 week"
-    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
-    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
-  # Media files
-    ExpiresByType audio/ogg                             "access plus 1 month"
-    ExpiresByType image/bmp                             "access plus 1 month"
-    ExpiresByType image/gif                             "access plus 1 month"
-    ExpiresByType image/jpeg                            "access plus 1 month"
-    ExpiresByType image/png                             "access plus 1 month"
-    ExpiresByType image/svg+xml                         "access plus 1 month"
-    ExpiresByType image/webp                            "access plus 1 month"
-    ExpiresByType video/mp4                             "access plus 1 month"
-    ExpiresByType video/ogg                             "access plus 1 month"
-    ExpiresByType video/webm                            "access plus 1 month"
-  # Other
-    ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
+<IfModule mod_headers.c>
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set X-Content-Type-Options: "nosniff"
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
 </IfModule>
+
+#################
+# Cache-Control #
+#################
+
+# JS and CSS files - 4 months
+<filesMatch ".(js|css)$">
+ Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+</filesMatch>
+
+# Media files - 4 months
+<filesMatch ".(ico|jpg|jpeg|png|gif|webp|svg)$">
+ Header set Cache-Control "max-age=10518975, public"
+</filesMatch>
+
+# Font files - 1 year
+<filesMatch ".(woff2)$">
+ Header set Cache-Control "max-age=31556926, public"
+</filesMatch>
 
 #################################################################
 # Fingerprinting Attacks                                        #
@@ -111,5 +111,26 @@ AddDefaultCharset utf-8
 <IfModule mod_rewrite.c>
 	RewriteCond %{QUERY_STRING} PHP[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12} [NC,OR]
 	RewriteCond %{REQUEST_URI} =PHP[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12} [NC]
+	RewriteRule .* - [F,L]
+</IfModule>
+
+# #############################################################
+# Deny POST requests using HTTP 1.0                           #
+#                                                             #
+# Credits: https://perishablepress.com/protect-post-requests/ #
+# #############################################################
+<IfModule mod_rewrite.c>
+	RewriteCond %{THE_REQUEST} ^POST(.*)HTTP/(0\.9|1\.0)$ [NC]
+	RewriteRule .* - [F,L]
+</IfModule>
+
+# ###############################################################################
+# Allow POST based on referer                                                   #
+#                                                                               #
+# Credits: https://httpd.apache.org/docs/current/mod/mod_rewrite.html           #
+# ###############################################################################
+<IfModule mod_rewrite.c>
+	RewriteCond %{REQUEST_METHOD} POST
+    RewriteCond expr "! %{HTTP_REFERER} -strmatch '*://%{HTTP_HOST}/*'"
 	RewriteRule .* - [F,L]
 </IfModule>

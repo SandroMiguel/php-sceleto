@@ -26,13 +26,13 @@
         "psr-4": {
             "PhpSceleto\\Core\\": "src/core/",
             "PhpSceleto\\App\\": "src/app/"
-      }
+        }
     },
     "config": {
         "sort-packages": true
     },
     "require": {
-        "php": ">=7.2.0",
+        "php": ">=7.2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "7"
