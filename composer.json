@@ -24,8 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PhpSceleto\\Core\\": "src/core/",
-            "PhpSceleto\\App\\": "src/app/"
+            "PhpSceleto\\": "src/php/"
         }
     },
     "config": {
