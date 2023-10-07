@@ -35,7 +35,6 @@ your-php-library/
 ├─── logs/
 ├─── docs/
 ├─── vendor/
-├─── tests/
 ├─── .editorconfig
 ├─── .gitignore
 ├─── .htaccess
@@ -63,7 +62,6 @@ Files and folders overview.
 | **logs/**                          | Log files (e.g., code coverage report)               |
 | **docs/**                          | Documentation files (e.g., PHPDoc)                   |
 | **vendor/**                        | Composer vendor directory contains your dependencies |
-| **tests/**                         | Automated tests                                      |
 | **.editorconfig**                  | IDE coding style settings                            |
 | **.gitignore**                     | Files and directories that Git should ignore         |
 | **.htaccess**                      | Hypertext access file for Apache configuration       |
