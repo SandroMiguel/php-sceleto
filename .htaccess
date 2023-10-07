@@ -1,4 +1,4 @@
-# .htaccess v3.5.2 php-sceleto (2022/07/05) sandromiguel@sandromiguel.com
+# .htaccess v3.8.0 php-sceleto (2023-10-07) sandromiguel@sandromiguel.com
 
 ########################
 # Show/Hide PHP errors #
@@ -14,8 +14,8 @@ php_value error_reporting 0
 ##########
 # Upload #
 ##########
-php_value upload_max_filesize 11M
-php_value post_max_size 12M
+php_value upload_max_filesize 100M
+php_value post_max_size 0
 
 ##################################################################################
 # Character encodings                                                            #
@@ -58,12 +58,13 @@ AddDefaultCharset utf-8
     RewriteRule ^sitemap.xml public/sitemap.xml [L]
     RewriteRule ^favicon.ico public/icons/favicon.ico [L]
     RewriteRule ^(backoffice-directory)($|/) - [L]
+    RewriteRule ^(public/js) - [L]
 
     # To redirect from www to non www (Rewrite www.example.com → example.com)
     RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
     RewriteRule ^(.*) http%{ENV:protossl}://%1/$1 [R=301,NE,L]
 
-    # Redirect HTTP to HTTPS automatically (only if not in localhost)
+    # Redirect HTTP to HTTPS automatically
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
