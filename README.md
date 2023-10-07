@@ -2,7 +2,7 @@
 
 # Welcome to PHP Sceleto
 
-**PHP Sceleto is a PHP directory structure sample.**
+**A PHP directory structure for your libraries.**
 
 [![license](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](LICENSE)
 
