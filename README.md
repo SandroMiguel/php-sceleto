@@ -6,9 +6,15 @@
 
 [![license](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](LICENSE)
 
-The inspirational skeleton in PHP
+PHP Sceleto is a directory structure template designed for creating PHP libraries. It provides a well-organized skeleton that I use for my PHP library projects and have decided to share with the community. This template is intended to streamline the development of PHP libraries, saving you time on initial setup and configuration.
 
-Current version: **0.4.2**
+## Features
+
+-   Organized directory structure for your PHP library:
+-   Includes common project files like `.editorconfig`, `.gitignore`, and `.htaccess`.
+-   Comes with a sample `composer.json` for easy Composer integration.
+-   Includes a sample PHPUnit configuration file `phpunit.xml.dist`.
+-   License and contributing guidelines for open-source projects.
 
 ## Directory structure
 
@@ -20,12 +26,13 @@ your-php-app/
 │  └─── img/
 │
 ├──┬ src/
-│  ├──┬ app/
-│  │  ├─── [SomeCustomClass].php
-│  │  ├─── ...
+│  ├──┬ [SomeClass].php
+│  │  ├ [AnotherClass].php
+│  │  ├ ...
 │  │
-│  └──┬ core/
-│     ├─── [SomeCommonClass].php
+│  └──┬ tests/
+│     ├─── [SomeClass]Test.php
+│     ├─── [AnotherClass]Test.php
 │     ├─── ...
 │
 ├─── config/
@@ -44,72 +51,163 @@ your-php-app/
 └─── README.md
 ```
 
+## Files and Folders
+
+Files and folders overview.
+
+| File/Folder                        | Description                                              |
+| ---------------------------------- | -------------------------------------------------------- |
+| **public/**                        | Web server files (all public files for your application) |
+| public/**css/**                    | CSS files                                                |
+| public/**js/**                     | JavaScript files                                         |
+| public/**images**                  | Image files                                              |
+| **src/**                           | Source code of the application                           |
+| src/**SomeClass.php**              | Example PHP class file (SomeClass)                       |
+| src/**AnotherClass.php**           | Example PHP class file (AnotherClass)                    |
+| src/**tests/**                     | Tests directory                                          |
+| src/tests/**SomeClassTest.php**    | PHPUnit test case for `SomeClass` (Example class)        |
+| src/tests/**AnotherClassTest.php** | PHPUnit test case for `AnotherClass` (Example class)     |
+| **config/**                        | Configuration files                                      |
+| **logs/**                          | Log files (e.g., code coverage report)                   |
+| **docs/**                          | Documentation files (e.g., PHPDoc)                       |
+| **vendor/**                        | Composer vendor directory contains your dependencies     |
+| **tests/**                         | Automated tests                                          |
+| **.editorconfig**                  | IDE coding style settings                                |
+| **.gitignore**                     | Files and directories that Git should ignore             |
+| **.htaccess**                      | Hypertext access file for Apache configuration           |
+| **composer.json**                  | Composer dependencies                                    |
+| **composer.lock**                  | Composer lock file                                       |
+| **phpunit.xml.dist**               | PHPUnit configuration file                               |
+| **LICENSE**                        | License document                                         |
+| **CONTRIBUTING.md**                | Contributing guidelines                                  |
+| **README.md**                      | This document                                            |
+
 ## Getting Started
 
-### Step 1 - Install this directory structure
+Follow these steps to use PHP Sceleto as a starting point for your PHP library:
 
-#### Download
+### Step 1 - Clone this repository to your local machine:
 
-Download the [latest release](https://github.com/SandroMiguel/php-sceleto/archive/v.0.3.zip)
+Replace `your-php-library` with your desired name
 
-### Step 2 - Install the dependencies
-
-Install the dependencies with Composer.
-
-```sh
-cd your-php-app   # Your project name
-composer install  # Install the dependencies
+```bash
+git clone https://github.com/SandroMiguel/php-sceleto.git your-php-library
 ```
+
+### Step 2 - Navigate to the cloned directory:
+
+```bash
+cd your-php-library
+```
+
+### Step 3 - Remove the `.git` directory to start a new Git repository for your project:
+
+```bash
+rm -rf .git
+```
+
+### Step 4 - Install the project dependencies using Composer:
+
+```bash
+composer install
+```
+
+Now, you have a clean slate to begin developing your PHP library independently. You can add your own code, configuration, and documentation within the provided directory structure.
 
 ## Composer commands
 
-### Run PHPUnit
+You can use Composer commands to streamline various development tasks. Here are the available commands and how to run them:
+
+### Check for Outdated Dependencies
+
+To check for outdated Composer dependencies that are defined directly in your project, run:
+
+```sh
+composer outdated:direct
+```
+
+### Run PHP CodeSniffer
+
+To run PHP CodeSniffer on the source code in the src/php directory, use the following command:
+
+```sh
+composer phpcs
+```
+
+### Run PHP CodeSniffer on a Specific File
+
+For running PHP CodeSniffer on a specific file, use the following command, replacing `[file]` with the path to your target file:
+
+```sh
+composer phpcs:file [file]
+```
+
+### Analyze Code Quality and Architecture
+
+To analyze code quality and architecture with PHP Insights, run:
+
+```sh
+composer phpinsights
+```
+
+### Generate PHP Metrics Report
+
+Generate a PHP Metrics report and display the Node.js version with:
+
+```sh
+composer phpmetrics
+```
+
+### Run PHPStan Analysis
+
+For PHPStan analysis with level 7 on the source code in the `src/php` directory, use:
+
+```sh
+composer phpstan
+```
+
+### Run Psalm Static Analysis
+
+To run Psalm static analysis, simply use:
+
+```sh
+composer psalm
+```
+
+### Tail Application Logs
+
+To tail the application log located at `./storage/log/app.log`, use:
+
+```sh
+composer logs
+```
+
+### Run PHPUnit Tests
+
+For running PHPUnit tests, execute:
 
 ```sh
 composer test
 ```
 
-## Composer commands
+### Run PHPUnit Tests with Coverage Report
 
-### Run Test Coverage
+To run PHPUnit tests and generate a coverage report in the `log/report` directory, use:
 
 ```sh
-composer test-coverage
+composer test:coverage
 ```
-
-## Files and Folders
-
-Files and folders overview.
-
-| File/Folder                      | Description                                              |
-| -------------------------------- | -------------------------------------------------------- |
-| **public/**                      | Web server files (all public files for your application) |
-| public/**css/**                  | CSS files                                                |
-| public/**js/**                   | JavaScript files                                         |
-| public/**img**                   | Image files                                              |
-| **src/**                         | The source code of the application                       |
-| src/**app/**                     | Custom PHP classes                                       |
-| src/app/**SomeCustomClass.php**  | PHP custom class file example                            |
-| src/**core/**                    | Common code in all applications                          |
-| src/core/**SomeCommonClass.php** | Common class file example                                |
-| **config/**                      | Configuration files                                      |
-| **logs/**                        | Log files (e.g. code coverage report)                    |
-| **docs/**                        | Documentation files (e.g. PHPDoc)                        |
-| **vendor/**                      | Composer vendor directory contains your dependencies     |
-| **tests/**                       | Automated tests                                          |
-| **.editorconfig**                | IDE coding style                                         |
-| **.gitignore**                   | Files and directories that Git should ignore             |
-| **.htaccess**                    | Hypertext access file for Apache configuration           |
-| **composer.json**                | Composer dependencies                                    |
-| **composer.lock**                | Composer lock file                                       |
-| **phpunit.xml.dist**             | PHPUnit configuration                                    |
-| **LICENSE**                      | License document                                         |
-| **CONTRIBUTING.md**              | Contributing guidelines                                  |
-| **README.md**                    | This document                                            |
 
 ## Credits
 
--   IDE coding style - [EditorConfig](https://editorconfig.org/)
+-   [EditorConfig](https://editorconfig.org/): IDE coding style settings.
+-   [PHPUnit](https://phpunit.de/): Testing framework for PHP.
+-   [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer): PHP coding standards checker and fixer.
+-   [PHP Insights](https://phpinsights.com/): Code quality and architecture analysis tool.
+-   [PHP Metrics](https://phpmetrics.org/): PHP metrics generator.
+-   [PHPStan](https://phpstan.org/): PHP static analysis tool.
+-   [Psalm](https://psalm.dev/): Static analysis tool for PHP.
+-   [Composer](https://getcomposer.org/): Dependency management for PHP.
 -   Logo skeleton - made by [Freepik](http://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com/) is
     licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
 
