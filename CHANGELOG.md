@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/SandroMiguel/php-sceleto/compare/v0.5.1...v1.0.0) (2023-10-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade to stable version
+
+### Bug Fixes
+
+* update about ([f2e1e25](https://github.com/SandroMiguel/php-sceleto/commit/f2e1e2584f0b3942dd5651049935a9940fc2e6b5))
+
 ## [0.5.1](https://github.com/SandroMiguel/php-sceleto/compare/v0.5.0...v0.5.1) (2023-10-07)
 
 
