@@ -31,7 +31,6 @@ your-php-library/
 │     ├─── [AnotherClass]Test.php
 │     ├─── ...
 │
-├─── config/
 ├─── logs/
 ├─── docs/
 ├─── vendor/
@@ -58,7 +57,6 @@ Files and folders overview.
 | src/**tests/**                     | Tests directory                                      |
 | src/tests/**SomeClassTest.php**    | PHPUnit test case for `SomeClass` (Example class)    |
 | src/tests/**AnotherClassTest.php** | PHPUnit test case for `AnotherClass` (Example class) |
-| **config/**                        | Configuration files                                  |
 | **logs/**                          | Log files (e.g., code coverage report)               |
 | **docs/**                          | Documentation files (e.g., PHPDoc)                   |
 | **vendor/**                        | Composer vendor directory contains your dependencies |
