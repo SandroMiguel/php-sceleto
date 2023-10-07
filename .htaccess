@@ -73,7 +73,7 @@ AddDefaultCharset utf-8
 
     # Spefic language and page - e.g. en/some-page → public/index.php?lang=en&pageName=some-page
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^([a-z]{2})?\/?([^\/]+)?\/?([^\/]+)?\/? public/index.php?lang=$1&pageName=$2&trailUniqueName=$3 [L,QSA]
+    RewriteRule ^([a-z]{2})?\/?([^\/]+)?\/?([^\/]+)?\/? public/index.php?lang=$1&pageName=$2&itemUniqueName=$3 [L,QSA]
 
 </IfModule>
 
