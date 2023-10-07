@@ -1,4 +1,4 @@
-# .htaccess v3.8.0 php-sceleto (2023-10-07) sandromiguel@sandromiguel.com
+# .htaccess v3.8.1 php-sceleto (2023-10-07) sandromiguel@sandromiguel.com
 
 ########################
 # Show/Hide PHP errors #
@@ -65,13 +65,15 @@ AddDefaultCharset utf-8
     RewriteRule ^(.*) http%{ENV:protossl}://%1/$1 [R=301,NE,L]
 
     # Redirect HTTP to HTTPS automatically
+    RewriteCond %{HTTP_HOST} != some-domain.local
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 	# API (Web Service): Front Controller (Rewrite 1.0/abc → api/v1.0/index.php)
     RewriteRule ^([0-9]).([0-9])/(.*)$ api/v$1.$2/index.php [B,NE,NC,L]
 
-    # Spefic language and page - e.g. en/some-page → public/index.php?lang=en&pageName=some-page
+    # Spefic language, page and item
+    # E.g. en/some-page/some-item → public/index.php?lang=en&pageName=some-page&itemName=some-item
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^([a-z]{2})?\/?([^\/]+)?\/?([^\/]+)?\/? public/index.php?lang=$1&pageName=$2&itemUniqueName=$3 [L,QSA]
 
