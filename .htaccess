@@ -64,9 +64,9 @@ AddDefaultCharset utf-8
     RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
     RewriteRule ^(.*) http%{ENV:protossl}://%1/$1 [R=301,NE,L]
 
-    # Redirect HTTP to HTTPS automatically
-    RewriteCond %{HTTP_HOST} != some-domain.local
+    # Redirect HTTP to HTTPS automatically for all domains except those ending in .local
     RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP_HOST} !\.local$
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 	# API (Web Service): Front Controller (Rewrite 1.0/abc → api/v1.0/index.php)
