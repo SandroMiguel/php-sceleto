@@ -102,6 +102,10 @@ composer install
 
 Now, you have a clean slate to begin developing your PHP library independently. You can add your own code, configuration, and documentation within the provided directory structure.
 
+### Step 5 - Bonus: Continue Your Project Setup
+
+If you wish to further enhance your project and follow best practices, consider continuing your project setup with [Some Awesome Project](https://github.com/SandroMiguel/some-awesome-project). Some Awesome Project provides a set of guidelines and additional configurations that can make your project development even more efficient.
+
 ## Composer commands
 
 You can use Composer commands to streamline various development tasks. Here are the available commands and how to run them:
