@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.0](https://github.com/SandroMiguel/php-sceleto/compare/v1.0.0...v2.0.0) (2023-10-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade to stable version
+
+### Bug Fixes
+
+* **package.json:** add dev dependencies ([a451d2c](https://github.com/SandroMiguel/php-sceleto/commit/a451d2ccc444c3eedfa1a619ffd0608e1bfada19))
+* **phpunit.xml.dist:** update directory ([878864e](https://github.com/SandroMiguel/php-sceleto/commit/878864e63557e6515e8201dcd9f3fccec83fc97d))
+* update about ([f2e1e25](https://github.com/SandroMiguel/php-sceleto/commit/f2e1e2584f0b3942dd5651049935a9940fc2e6b5))
+
 ## [1.0.0](https://github.com/SandroMiguel/php-sceleto/compare/v0.5.1...v1.0.0) (2023-10-09)
 
 
