@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/SandroMiguel/php-sceleto/compare/v2.0.0...v2.0.1) (2023-10-17)
+
+
+### Bug Fixes
+
+* **phpunit.xml.dist:** fix phpunit configuration ([fd07d01](https://github.com/SandroMiguel/php-sceleto/commit/fd07d0118fccac09d94f88c414af056d505faada))
+
 ## [2.0.0](https://github.com/SandroMiguel/php-sceleto/compare/v1.0.0...v2.0.0) (2023-10-10)
 
 
