@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/SandroMiguel/php-sceleto/compare/v2.0.1...v2.0.2) (2023-10-27)
+
+
+### Bug Fixes
+
+* **composer.json:** fix phpmetrics report path ([2984432](https://github.com/SandroMiguel/php-sceleto/commit/298443256460686142d4d9f765c0ad5111e5a137))
+
 ## [2.0.1](https://github.com/SandroMiguel/php-sceleto/compare/v2.0.0...v2.0.1) (2023-10-17)
 
 
