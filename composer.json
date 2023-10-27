@@ -52,7 +52,7 @@
         "phpcs": "~/.config/composer/vendor/bin/phpcs -s src",
         "phpcs:file": "~/.config/composer/vendor/bin/phpcs -s",
         "phpinsights": "phpinsights analyse src/ -v",
-        "phpmetrics": "vendor/bin/phpmetrics --report-html=log/php_metrics_report . && node --version",
+        "phpmetrics": "vendor/bin/phpmetrics --report-html=storage/log/php_metrics_report . && node --version",
         "phpstan": "phpstan analyse src --level 7",
         "psalm": "psalm",
         "logs": "tail -f ./storage/log/app.log",
