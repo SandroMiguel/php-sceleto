@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/SandroMiguel/php-sceleto/compare/v2.0.2...v2.0.3) (2024-03-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependecies ([31ba324](https://github.com/SandroMiguel/php-sceleto/commit/31ba32425a15af0fb0957f364596f849ad18d561))
+
 ## [2.0.2](https://github.com/SandroMiguel/php-sceleto/compare/v2.0.1...v2.0.2) (2023-10-27)
 
 
