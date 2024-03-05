@@ -74,35 +74,17 @@ Files and folders overview.
 
 Follow these steps to use PHP Sceleto as a starting point for your PHP library:
 
-### Step 1 - Clone this repository to your local machine:
+### Step 1 - Create a new project using Composer:
+
+```bash
+composer create-project SandroMiguel/php-sceleto your-php-library
+```
 
 Replace `your-php-library` with your desired name
 
-```bash
-git clone https://github.com/SandroMiguel/php-sceleto.git your-php-library
-```
-
-### Step 2 - Navigate to the cloned directory:
-
-```bash
-cd your-php-library
-```
-
-### Step 3 - Remove the `.git` directory to start a new Git repository for your project:
-
-```bash
-rm -rf .git
-```
-
-### Step 4 - Install the project dependencies using Composer:
-
-```bash
-composer install
-```
-
 Now, you have a clean slate to begin developing your PHP library independently. You can add your own code, configuration, and documentation within the provided directory structure.
 
-### Step 5 - Bonus: Continue Your Project Setup
+### Step 2 - Bonus: Continue Your Project Setup
 
 If you wish to further enhance your project and follow best practices, consider continuing your project setup with [Some Awesome Project](https://github.com/SandroMiguel/some-awesome-project). Some Awesome Project provides a set of guidelines and additional configurations that can make your project development even more efficient.
 
