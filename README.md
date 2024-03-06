@@ -191,7 +191,11 @@ Want to contribute? All contributions are welcome. Read the [contributing guide]
 
 ## Questions
 
-If you have questions tweet me at [@sandro_m_m](https://twitter.com/sandro_m_m) or [open an issue](https://github.com/SandroMiguel/php-sceleto/issues/new).
+If you have questions tweet me at [@sandro_m_m](https://twitter.com/sandro_m_m) or [open an issue](../../issues/new).
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md)
 
 ## License
 
