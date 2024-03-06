@@ -2,7 +2,7 @@
 
 # Welcome to PHP Sceleto
 
-**A PHP directory structure for your libraries.**
+**A PHP directory structure for my libraries.**
 
 [![license](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](LICENSE)
 
