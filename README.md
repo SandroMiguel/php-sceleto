@@ -164,6 +164,12 @@ For running PHPUnit tests, execute:
 composer test
 ```
 
+To run PHPUnit tests with filtering, execute:
+
+```
+composer test:filter methodName ClassName path/to/file.php
+```
+
 ### Run PHPUnit Tests with Coverage Report
 
 To run PHPUnit tests and generate a coverage report in the `log/report` directory, use:

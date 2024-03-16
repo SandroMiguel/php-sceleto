@@ -57,6 +57,7 @@
         "psalm": "psalm --show-info=true",
         "logs": "tail -f ./storage/log/app.log",
         "test": "phpunit --colors=always",
+        "test:filter": "phpunit --filter",
         "test:coverage": "phpunit --coverage-html log/report"
     },
     "scripts-description": {
@@ -69,6 +70,7 @@
         "psalm": "Run Psalm static analysis.",
         "logs": "Tail the application log located at ./storage/log/app.log.",
         "test": "Run PHPUnit tests.",
+        "test:filter": "Run tests with filtering.",
         "test:coverage": "Run PHPUnit tests and generate coverage report in log/report directory."
     }
 }
