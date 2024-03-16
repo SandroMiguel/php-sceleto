@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/SandroMiguel/php-sceleto/compare/v2.0.3...v2.1.0) (2024-03-16)
+
+
+### Features
+
+* **composer.json:** add test:filter ([220ac6f](https://github.com/SandroMiguel/php-sceleto/commit/220ac6fa7c372d96610e669c02c0b21914699d82))
+
 ## [2.0.3](https://github.com/SandroMiguel/php-sceleto/compare/v2.0.2...v2.0.3) (2024-03-05)
 
 
