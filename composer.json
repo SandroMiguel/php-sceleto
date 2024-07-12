@@ -41,11 +41,11 @@
         "phan/phan": "^5.4",
         "phpmetrics/phpmetrics": "^2.8",
         "phpspec/phpspec": "^7.5",
-        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan": "^1.11",
         "phpunit/phpunit": "^9",
         "psalm/plugin-phpunit": "^0.18.4",
         "roave/security-advisories": "dev-master",
-        "vimeo/psalm": "^5.22"
+        "vimeo/psalm": "^5.25"
     },
     "scripts": {
         "outdated:direct": "composer outdated --direct",
