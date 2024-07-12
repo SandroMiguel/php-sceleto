@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/SandroMiguel/php-sceleto/compare/v2.1.0...v2.2.0) (2024-07-12)
+
+
+### Features
+
+* **phpstan.neon:** add phpstan config file ([0ee69e8](https://github.com/SandroMiguel/php-sceleto/commit/0ee69e844c891b9c6ecf0afd87359b418ae34ba7))
+
 ## [2.1.0](https://github.com/SandroMiguel/php-sceleto/compare/v2.0.3...v2.1.0) (2024-03-16)
 
 
