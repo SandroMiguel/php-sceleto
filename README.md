@@ -22,11 +22,11 @@ PHP Sceleto is a directory structure template designed for creating PHP librarie
 your-php-library/
 │
 ├──┬ src/
-│  ├──┬ [SomeClass].php
-│  │  ├ [AnotherClass].php
-│  │  ├ ...
+│  │  ├─── [SomeClass].php
+│  │  ├─── [AnotherClass].php
+│  │  ├─── ...
 │  │
-│  └──┬ tests/
+│  └ tests/
 │     ├─── [SomeClass]Test.php
 │     ├─── [AnotherClass]Test.php
 │     ├─── ...
@@ -49,26 +49,26 @@ your-php-library/
 
 Files and folders overview.
 
-| File/Folder                        | Description                                          |
-| ---------------------------------- | ---------------------------------------------------- |
-| **src/**                           | Source code of the application                       |
-| src/**SomeClass.php**              | Example PHP class file (SomeClass)                   |
-| src/**AnotherClass.php**           | Example PHP class file (AnotherClass)                |
-| src/**tests/**                     | Tests directory                                      |
-| src/tests/**SomeClassTest.php**    | PHPUnit test case for `SomeClass` (Example class)    |
-| src/tests/**AnotherClassTest.php** | PHPUnit test case for `AnotherClass` (Example class) |
-| **logs/**                          | Log files (e.g., code coverage report)               |
-| **docs/**                          | Documentation files (e.g., PHPDoc)                   |
-| **vendor/**                        | Composer vendor directory contains your dependencies |
-| **.editorconfig**                  | IDE coding style settings                            |
-| **.gitignore**                     | Files and directories that Git should ignore         |
-| **.htaccess**                      | Hypertext access file for Apache configuration       |
-| **composer.json**                  | Composer dependencies                                |
-| **composer.lock**                  | Composer lock file                                   |
-| **phpunit.xml.dist**               | PHPUnit configuration file                           |
-| **LICENSE**                        | License document                                     |
-| **CONTRIBUTING.md**                | Contributing guidelines                              |
-| **README.md**                      | This document                                        |
+| File/Folder                    | Description                                          |
+| ------------------------------ | ---------------------------------------------------- |
+| **src/**                       | Source code of the application                       |
+| src/**SomeClass.php**          | Example PHP class file (SomeClass)                   |
+| src/**AnotherClass.php**       | Example PHP class file (AnotherClass)                |
+| src/**tests/**                 | Tests directory                                      |
+| tests/**SomeClassTest.php**    | PHPUnit test case for `SomeClass` (Example class)    |
+| tests/**AnotherClassTest.php** | PHPUnit test case for `AnotherClass` (Example class) |
+| **logs/**                      | Log files (e.g., code coverage report)               |
+| **docs/**                      | Documentation files (e.g., PHPDoc)                   |
+| **vendor/**                    | Composer vendor directory contains your dependencies |
+| **.editorconfig**              | IDE coding style settings                            |
+| **.gitignore**                 | Files and directories that Git should ignore         |
+| **.htaccess**                  | Hypertext access file for Apache configuration       |
+| **composer.json**              | Composer dependencies                                |
+| **composer.lock**              | Composer lock file                                   |
+| **phpunit.xml.dist**           | PHPUnit configuration file                           |
+| **LICENSE**                    | License document                                     |
+| **CONTRIBUTING.md**            | Contributing guidelines                              |
+| **README.md**                  | This document                                        |
 
 ## Getting Started
 
