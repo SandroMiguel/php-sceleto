@@ -6,8 +6,8 @@
         </include>
     </coverage>
     <testsuites>
-        <testsuite name="PHP Sceleto Test Suite">
-            <directory>./src/tests</directory>
+        <testsuite name="Test Suite">
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
