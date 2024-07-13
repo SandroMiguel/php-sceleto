@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/SandroMiguel/php-sceleto/compare/v2.2.0...v2.3.0) (2024-07-13)
+
+
+### Features
+
+* move tests/ directory to root ([1f21c42](https://github.com/SandroMiguel/php-sceleto/commit/1f21c42fb2b4660faf0a90d1ce8e2165b9e65a34))
+
 ## [2.2.0](https://github.com/SandroMiguel/php-sceleto/compare/v2.1.0...v2.2.0) (2024-07-12)
 
 
