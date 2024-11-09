@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/SandroMiguel/php-sceleto/compare/v2.3.0...v2.4.0) (2024-11-09)
+
+
+### Features
+
+* update packages ([0585751](https://github.com/SandroMiguel/php-sceleto/commit/05857519c7b3e047d30837e93e9b605a208908fe))
+
 ## [2.3.0](https://github.com/SandroMiguel/php-sceleto/compare/v2.2.0...v2.3.0) (2024-07-13)
 
 
