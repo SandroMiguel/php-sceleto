@@ -1,6 +1,6 @@
 {
     "name": "php-sceleto",
-    "version": "2.3.0",
+    "version": "2.4.0",
     "packageManager": "yarn@3.3.1",
     "config": {
         "commitizen": {
