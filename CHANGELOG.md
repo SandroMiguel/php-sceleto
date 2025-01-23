@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.0](https://github.com/SandroMiguel/php-sceleto/compare/v2.3.0...v2.4.0) (2025-01-23)
+
+
+### Features
+
+* **.htaccess:** update redirect rules ([9668682](https://github.com/SandroMiguel/php-sceleto/commit/96686827959d2a0e66d505ac7873a7406d64c124))
+* update packages ([0585751](https://github.com/SandroMiguel/php-sceleto/commit/05857519c7b3e047d30837e93e9b605a208908fe))
+
 ## [2.3.0](https://github.com/SandroMiguel/php-sceleto/compare/v2.2.0...v2.3.0) (2024-07-13)
 
 
