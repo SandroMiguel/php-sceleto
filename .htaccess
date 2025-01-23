@@ -1,4 +1,4 @@
-# .htaccess v3.8.1 php-sceleto (2023-10-07) sandromiguel@sandromiguel.com
+# .htaccess v4.1.1 php-sceleto (2024-05-03) sandromiguel@sandromiguel.com
 
 ########################
 # Show/Hide PHP errors #
@@ -49,7 +49,6 @@ AddDefaultCharset utf-8
 # Rewrite engine                  #
 ###################################
 <IfModule mod_rewrite.c>
-
     RewriteEngine On
 
     # Exclude files and directories from rewrite rule
@@ -60,23 +59,18 @@ AddDefaultCharset utf-8
     RewriteRule ^(backoffice-directory)($|/) - [L]
     RewriteRule ^(public/js) - [L]
 
+    # API
+    RewriteRule ^v([0-9]+)/(.*)$ api/index.php [B,NE,NC,L]
+
     # To redirect from www to non www (Rewrite www.example.com → example.com)
     RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
     RewriteRule ^(.*) http%{ENV:protossl}://%1/$1 [R=301,NE,L]
 
-    # Redirect HTTP to HTTPS automatically for all domains except those ending in .local
-    RewriteCond %{HTTPS} off
-    RewriteCond %{HTTP_HOST} !\.local$
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-	# API (Web Service): Front Controller (Rewrite 1.0/abc → api/v1.0/index.php)
-    RewriteRule ^([0-9]).([0-9])/(.*)$ api/v$1.$2/index.php [B,NE,NC,L]
-
-    # Spefic language, page and item
-    # E.g. en/some-page/some-item → public/index.php?lang=en&pageName=some-page&itemName=some-item
+    # Spefic locale, page and sub-page
+    # E.g. 1: http://example.com/en/about → web/public/index.php?locale=en&pageSlug=about
+    # E.g. 2: http://example.com/pt/produto/coca-cola → web/public/index.php?locale=pt&pageSlug=produto&subPageSlug=coca-cola
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^([a-z]{2})?\/?([^\/]+)?\/?([^\/]+)?\/? public/index.php?lang=$1&pageName=$2&itemUniqueName=$3 [L,QSA]
-
+    RewriteRule ^([a-z]{2})?\/?([^\/]+)?\/?([^\/]+)?\/? web/public/index.php?locale=$1&pageSlug=$2&subPageSlug=$3 [L,QSA]
 </IfModule>
 
 <IfModule mod_headers.c>
@@ -133,7 +127,8 @@ AddDefaultCharset utf-8
 # Credits: https://httpd.apache.org/docs/current/mod/mod_rewrite.html           #
 # ###############################################################################
 <IfModule mod_rewrite.c>
-	RewriteCond %{REQUEST_METHOD} POST
+    RewriteCond %{REQUEST_METHOD} POST
     RewriteCond expr "! %{HTTP_REFERER} -strmatch '*://%{HTTP_HOST}/*'"
-	RewriteRule .* - [F,L]
+    RewriteRule .* - [F,L]
+    ErrorDocument 403 "403 Forbidden: Whoops, looks like you've hit a wall! Code: BANANA99"
 </IfModule>
