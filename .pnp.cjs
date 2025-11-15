@@ -548,7 +548,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cosmiconfig", "virtual:d99df99cfd30294d8d2a33722f24e2eed11d8e1f6aca1118ed6504fe6232d3c834a406fca445a342b13e3e2f3d8673003414ee87e79b986ebb42edb6ba54b364#npm:8.3.6"],\
             ["@types/typescript", null],\
             ["import-fresh", "npm:3.3.0"],\
-            ["js-yaml", "npm:4.1.0"],\
+            ["js-yaml", "npm:4.1.1"],\
             ["parse-json", "npm:5.2.0"],\
             ["path-type", "npm:4.0.0"],\
             ["typescript", "patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=ad5954"]\
@@ -1067,10 +1067,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["js-yaml", [\
-        ["npm:4.1.0", {\
-          "packageLocation": "./.yarn/cache/js-yaml-npm-4.1.0-3606f32312-c7830dfd45.zip/node_modules/js-yaml/",\
+        ["npm:4.1.1", {\
+          "packageLocation": "./.yarn/cache/js-yaml-npm-4.1.1-86ec786790-ea2339c693.zip/node_modules/js-yaml/",\
           "packageDependencies": [\
-            ["js-yaml", "npm:4.1.0"],\
+            ["js-yaml", "npm:4.1.1"],\
             ["argparse", "npm:2.0.1"]\
           ],\
           "linkType": "HARD"\
